@@ -265,6 +265,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.13.1)
+    rubygems-update (3.5.18)
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -338,6 +339,7 @@ DEPENDENCIES
   rails (~> 7.0.8, >= 7.0.8.4)
   redis (~> 4.0)
   rspec-rails (~> 5.0.0)
+  rubygems-update (>= 3.3.22)
   sassc-rails
   selenium-webdriver
   sprockets-rails
@@ -350,4 +352,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.4.13
+   2.5.18
