@@ -1,0 +1,49 @@
+---
+es:
+  nav:
+    language: Idioma
+    log_out: Cerrar Sesión
+    login: Iniciar Sesión
+    new_post: Nueva Publicación
+    sign_up: Registrarse
+    view_all_posts: Ver Todas las Publicaciones
+  posts:
+    back: Volver
+    confirm_delete: "¿Estás seguro?"
+    create:
+      failure: No fue posible crear el blog
+      success: Nuevo Blog creado con exito
+    delete: Eliminar
+    deleted: Eliminado
+    edit: Editar
+    edit_title: Editar Blog
+    error_deleting: Error al Eliminar
+    errors:
+      body_required: Contenido del Post es requerido
+      title_required: Título del Post es requerido
+    form:
+      body: Contenido
+      create_button: Crear Post
+      edit_button: Editar Post
+      edit_title: Formulario Editar Post
+      title: Formulario Crear Post
+    index:
+      invalid_page: Número de página invalido
+    new_title: Nuevo Blog
+    pagination:
+      next: Siguiente
+      previous: Anterior
+      showing_page: Mostrando página %{page} de %{total_pages}. Mostrando %{count}
+        publicaciones.
+    see_less: Ver menos
+    see_more: Ver más
+    show: Mostrar
+    table_headers:
+      actions: Acciones
+      body: Contenido
+      date: Fecha
+      posted_by: Publicado por
+      title: Título
+    title: Publicaciones del Blog
+    update:
+      errors: Falló la actualización

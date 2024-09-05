@@ -1,0 +1,53 @@
+<h1><%= t('posts.new_title') %></h1>
+<div id="error-messages"></div>
+
+<form id="new-post-form" class="needs-validation" novalidate>
+  <div class="mb-3">
+    <label for="title" class="form-label"><%= t('posts.form.title') %></label>
+    <input type="text" id="title" name="title" class="form-control" required>
+    <div class="invalid-feedback">
+      <%= t('posts.errors.title_required') %>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="body" class="form-label"><%= t('posts.form.body') %></label>
+    <textarea id="body" name="body" class="form-control" rows="4" required></textarea>
+    <div class="invalid-feedback">
+      <%= t('posts.errors.body_required') %>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary"><%= t('posts.form.create_button') %></button>
+</form>
+
+
+<script>
+document.getElementById('new-post-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const title = document.getElementById('title').value;
+  const body = document.getElementById('body').value;
+
+  fetch('/api/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    },
+    body: JSON.stringify({ post: { title: title, body: body } })
+  })
+  .then(response => {
+    if (!response.ok) {
+      return response.json().then(error => { throw new Error(error.errors.join(", ")) });
+    }
+    return response.json();
+  })
+  .then(data => {
+    window.location.href = `/posts`; // Redirect to post list page
+  })
+  .catch(error => {
+    console.error(error);
+  });
+});
+</script>

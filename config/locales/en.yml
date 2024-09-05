@@ -1,0 +1,48 @@
+---
+en:
+  nav:
+    language: Language
+    log_out: Log Out
+    login: Login
+    new_post: New Post
+    sign_up: Sign Up
+    view_all_posts: View All Posts
+  posts:
+    back: Back
+    confirm_delete: Are you sure?
+    create:
+      failure: Something went wrong, blog was not created
+      success: New blog created successfully
+    delete: Delete
+    deleted: Deleted
+    edit: Edit
+    edit_title: Edit Post
+    error_deleting: Error while deleting
+    errors:
+      body_required: Post body is required
+      title_required: Post title is required
+    form:
+      body: Body
+      create_button: Create Post
+      edit_button: Edit Post
+      edit_title: Form Edit Post
+      title: Form Create Post
+    index:
+      invalid_page: Invalid page number
+    new_title: New Post
+    pagination:
+      next: Next
+      previous: Previous
+      showing_page: Showing page %{page} of %{total_pages}. Displaying %{count} posts.
+    see_less: See Less
+    see_more: See More
+    show: Show
+    table_headers:
+      actions: Actions
+      body: Body
+      date: Date
+      posted_by: Posted By
+      title: Title
+    title: Blog Posts
+    update:
+      errors: Update failed

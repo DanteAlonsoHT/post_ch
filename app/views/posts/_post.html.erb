@@ -1,0 +1,26 @@
+<tr>
+  <td><strong><%= post['title'] %></strong></td>
+  <td>
+    <% if post['body'].length <= 100 %>
+      <%= post['body'] %>
+    <% else %>
+      <div class="post-body-short" id="short-body-<%= post['id'] %>">
+        <%= truncate(post['body'], length: 100) %> 
+        <a href="#" class="see-more" data-post-id="<%= post['id'] %>"><%= t('posts.see_more') %></a>
+      </div>
+      <div class="post-body-full d-none" id="full-body-<%= post['id'] %>">
+        <%= post['body'] %>
+        <a href="#" class="see-less" data-post-id="<%= post['id'] %>"><%= t('posts.see_less') %></a>
+      </div>
+    <% end %>
+  </td>
+  <td><%= post['user_email'] %></td>
+  <td><%= post['created_at'].strftime("%B %d, %Y") %></td>
+  <td>
+    <button class="btn btn-secondary btn-sm" onclick="showPost(<%= post['id'] %>)"><%= t('posts.show') %></button>
+  <% if current_user && current_user.email == post['user_email'] %>
+    <button class="btn btn-primary btn-sm" onclick="editPost(<%= post['id'] %>)"><%= t('posts.edit') %></button>
+    <button class="btn btn-danger btn-sm" onclick="deletePost(<%= post['id'] %>)"><%= t('posts.delete') %></button>
+  <% end %>
+</td>
+</tr>

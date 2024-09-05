@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="my-4 text-center"><%= @post.title %></h1>
+  <p class="lead"><%= @post.body %></p>
+
+  <% if user_signed_in? && current_user == @post.user %>
+    <div class="mb-3">
+      <%= link_to t('posts.edit'), edit_post_path(@post), class: 'btn btn-primary' %>
+      <%= link_to t('posts.delete'), post_path(@post), method: :delete, data: { confirm: t('posts.confirm_delete') }, class: 'btn btn-danger' %>
+    </div>
+  <% end %>
+
+  <%= link_to t('posts.back'), posts_path, class: 'btn btn-secondary' %>
+</div>

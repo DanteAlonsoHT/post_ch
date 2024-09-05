@@ -1,0 +1,24 @@
+<h1 class="text-center my-4"><%= t('posts.title') %></h1>
+
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th><%= t('posts.table_headers.title') %></th>
+          <th><%= t('posts.table_headers.body') %></th>
+          <th><%= t('posts.table_headers.posted_by') %></th>
+          <th><%= t('posts.table_headers.date') %></th>
+          <th><%= t('posts.table_headers.actions') %></th>
+        </tr>
+      </thead>
+      <tbody id="post-list">
+        <%= render partial: 'posts/post', collection: @posts, as: :post %>
+      </tbody>
+    </table>
+    </div>
+
+  <%= render 'shared/pagination', current_page: (@current_page || 1), total_pages: @total_pages, resource_name: 'posts', resource_count: @posts.size %>
+</div>
+
+<%= render partial: 'posts/index_javascript' %>
