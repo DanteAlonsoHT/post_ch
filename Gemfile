@@ -16,6 +16,8 @@ gem 'active_model_serializers'
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
+gem 'ffi', '~> 1.15'
+
 # Use devise for authentication
 gem 'devise'
 

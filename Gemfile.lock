@@ -329,6 +329,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  ffi (~> 1.15)
   gon
   i18n-tasks
   importmap-rails
