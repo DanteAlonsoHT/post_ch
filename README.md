@@ -2,6 +2,10 @@
 
 This project is a **Post Management Application** built with **Ruby on Rails** for the backend and integrated **JavaScript** to handle dynamic behavior on the frontend. The application allows users to create, update, and delete posts, and includes pagination, user authentication, and basic authorization.
 
+## Heroku Link
+
+https://still-mesa-45027-790ab0e987e9.herokuapp.com/es
+
 ## **Features**
 - **CRUD operations** for posts: Create, Read, Update, Delete.
 - **User Authentication**: Only authenticated users can create, update, or delete posts.
